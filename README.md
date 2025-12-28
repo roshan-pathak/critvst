@@ -1,6 +1,6 @@
 # crit 
+![cover](cover.png)
 A plugin for controlled instability. designed for 'distorted pop' production.
-
 ## Install
 MacOSX_silicon.pkg
 MacOSX_intel.pkg
