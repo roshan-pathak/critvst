@@ -1,0 +1,7 @@
+name=Sub Melt
+pressure=0.950000
+fault=0.300000
+split=0.050000
+momentum=0.550000
+resolve=0.120000
+mix=1.000000

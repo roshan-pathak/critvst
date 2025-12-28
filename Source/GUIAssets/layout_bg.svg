@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="780" viewBox="0 0 1300 780">
+  <rect width="100%" height="100%" fill="#181818" />
+  <!-- header -->
+  <rect x="0" y="0" width="100%" height="84" fill="#f2f2f2" />
+  <!-- subtle diagonal pattern -->
+  <g stroke="#e0e0e0" stroke-width="1" opacity="0.12">
+    <path d="M0,0 L84,84 M40,0 L124,84 M80,0 L164,84" />
+  </g>
+</svg>

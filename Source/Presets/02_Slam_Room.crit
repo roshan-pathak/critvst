@@ -1,0 +1,7 @@
+name=Slam Room
+pressure=0.950000
+fault=0.750000
+split=0.500000
+momentum=0.850000
+resolve=0.180000
+mix=1.000000

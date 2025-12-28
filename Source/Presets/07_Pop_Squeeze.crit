@@ -1,0 +1,7 @@
+name=Pop Squeeze
+pressure=0.400000
+fault=0.080000
+split=0.180000
+momentum=0.500000
+resolve=0.700000
+mix=1.000000

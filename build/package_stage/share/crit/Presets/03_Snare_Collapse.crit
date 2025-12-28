@@ -1,0 +1,7 @@
+name=Snare Collapse
+pressure=0.850000
+fault=0.900000
+split=0.150000
+momentum=0.400000
+resolve=0.250000
+mix=1.000000

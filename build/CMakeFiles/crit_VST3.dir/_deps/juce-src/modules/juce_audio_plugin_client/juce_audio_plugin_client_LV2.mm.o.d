@@ -1,0 +1,3 @@
+CMakeFiles/crit_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm.o: \
+  /Users/roshanpathak/Desktop/Manual\ Library/scripts/crit_vst/crit/build/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm \
+  /Users/roshanpathak/Desktop/Manual\ Library/scripts/crit_vst/crit/build/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.cpp
