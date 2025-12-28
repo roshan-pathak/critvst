@@ -2,9 +2,9 @@
 ![cover](cover.png)
 A plugin for controlled instability. designed for 'distorted pop' production.
 ## Install
-[MacOSX_silicon_installer.pkg](https://github.com/roshan-pathak/critvst/releases/download/v1.0.0/crit_MacOSX_silicon_installer.pkg)
-[MacOSX_intel_installer.pkg](https://github.com/roshan-pathak/critvst/releases/download/v1.0.0/crit_MacOSX_intel_installer.pkg)
-Windows_64_86_installer.exe - coming
+- [MacOSX_silicon_installer.pkg](https://github.com/roshan-pathak/critvst/releases/download/v1.0.0/crit_MacOSX_silicon_installer.pkg)
+- [MacOSX_intel_installer.pkg](https://github.com/roshan-pathak/critvst/releases/download/v1.0.0/crit_MacOSX_intel_installer.pkg)
+- Windows_64_86_installer.exe - coming
 ## Overview
 **crit** models behavior under load, not static effects. each control alters how the system responds to audio over time, creating organic instability and metallic character.
 ### Compatibility:
