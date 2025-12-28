@@ -24,9 +24,7 @@ jobs:
           submodules: recursive
 
       - name: Setup CMake
-        uses: actions/setup-cmake@v1
-        with:
-          cmake-version: 'latest'
+        uses: lukka/get-cmake@latest
 
       - name: Install NSIS
         run: |
