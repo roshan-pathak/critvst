@@ -1,0 +1,154 @@
+name: Build Windows Installer
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup CMake
+        uses: actions/setup-cmake@v1
+        with:
+          cmake-version: 'latest'
+
+      - name: Install NSIS
+        run: |
+          # Try to find NSIS first
+          $nsisPaths = @(
+            "C:\Program Files (x86)\NSIS",
+            "C:\Program Files\NSIS",
+            "$env:ProgramFiles\NSIS",
+            "$env:ProgramFiles(x86)\NSIS"
+          )
+          $nsisFound = $false
+          foreach ($path in $nsisPaths) {
+            if (Test-Path "$path\makensis.exe") {
+              Write-Host "NSIS found at: $path"
+              echo "$path" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+              $nsisFound = $true
+              break
+            }
+          }
+          if (-not $nsisFound) {
+            Write-Host "NSIS not found, installing via Chocolatey..."
+            choco install nsis -y
+            # Add default Chocolatey install path
+            $defaultPath = "C:\Program Files (x86)\NSIS"
+            if (Test-Path "$defaultPath\makensis.exe") {
+              echo "$defaultPath" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+            }
+          }
+
+      - name: Configure CMake
+        run: |
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build plugin
+        run: |
+          cmake --build build --config Release --parallel
+
+      - name: Verify build artifacts
+        run: |
+          if (-not (Test-Path "build\crit_artefacts\Release\VST3\crit.vst3")) {
+            Write-Error "VST3 plugin not found!"
+            exit 1
+          }
+          Write-Host "VST3 plugin found successfully"
+
+      - name: Stage files for installer
+        run: |
+          New-Item -ItemType Directory -Path "installer_stage" -Force | Out-Null
+          # Copy VST3 plugin
+          Copy-Item -Path "build\crit_artefacts\Release\VST3" -Destination "installer_stage\crit_artefacts\Release\VST3" -Recurse -Force
+          # Copy presets
+          New-Item -ItemType Directory -Path "installer_stage\Source\Presets" -Force | Out-Null
+          Copy-Item -Path "Source\Presets\*.crit" -Destination "installer_stage\Source\Presets\" -Force
+          # Copy assets if needed (optional)
+          if (Test-Path "assets") {
+            Copy-Item -Path "assets" -Destination "installer_stage\assets" -Recurse -Force
+          }
+          Write-Host "Files staged for installer"
+
+      - name: Create installer directory
+        run: |
+          New-Item -ItemType Directory -Path "dist" -Force | Out-Null
+
+      - name: Build NSIS installer
+        run: |
+          $stageDir = (Resolve-Path "installer_stage").Path
+          $outDir = (Resolve-Path "dist").Path
+          
+          # Find makensis.exe
+          $nsisPaths = @(
+            "C:\Program Files (x86)\NSIS\makensis.exe",
+            "C:\Program Files\NSIS\makensis.exe",
+            "$env:ProgramFiles\NSIS\makensis.exe",
+            "$env:ProgramFiles(x86)\NSIS\makensis.exe"
+          )
+          $makensis = $null
+          foreach ($path in $nsisPaths) {
+            if (Test-Path $path) {
+              $makensis = $path
+              Write-Host "Using NSIS at: $makensis"
+              break
+            }
+          }
+          
+          if (-not $makensis) {
+            # Try to find it in PATH
+            $makensis = (Get-Command makensis -ErrorAction SilentlyContinue).Source
+            if (-not $makensis) {
+              Write-Error "makensis.exe not found!"
+              exit 1
+            }
+          }
+          
+          & "$makensis" -DOUT_DIR="$outDir" -DSTAGE_DIR="$stageDir" "scripts\installer.nsi"
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "NSIS build failed with exit code $LASTEXITCODE"
+            exit 1
+          }
+
+      - name: Verify installer
+        run: |
+          if (-not (Test-Path "dist\crit-installer.exe")) {
+            Write-Error "Installer not found!"
+            exit 1
+          }
+          $fileInfo = Get-Item "dist\crit-installer.exe"
+          Write-Host "Installer created: $($fileInfo.Name) ($([math]::Round($fileInfo.Length / 1MB, 2)) MB)"
+
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: crit-windows-installer
+          path: dist/crit-installer.exe
+          retention-days: 30
+
+      - name: Upload build artifacts (for debugging)
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: build-artifacts-debug
+          path: |
+            build/
+            installer_stage/
+          retention-days: 7
+
