@@ -1,0 +1,8 @@
+# Hashes of file build rules.
+7cd905baab79890b2bfa03b37720a912 CMakeFiles/install_bundle
+73d86bf9c163bd604c14c3198d5ff11d CMakeFiles/package_all
+db16e618ad4a3f3d961121ff945a988d CMakeFiles/stage_for_pkg
+85df79ad447f443d40da8a9b6b312278 crit_artefacts/JuceLibraryCode/JuceHeader.h
+8b5d6077843e708857f7708a6ccd31db crit_artefacts/JuceLibraryCode/crit_resources.rc
+e5b458380663f4486c395758fc6ced58 crit_test_artefacts/JuceLibraryCode/JuceHeader.h
+20dbdba5bc63ff2c3072b0c8f0f0f12a crit_test_artefacts/JuceLibraryCode/crit_test_resources.rc

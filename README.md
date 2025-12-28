@@ -2,11 +2,11 @@
 ![cover](cover.png)
 A plugin for controlled instability. designed for 'distorted pop' production.
 ## Install
-MacOSX_silicon.pkg
-MacOSX_intel.pkg
-Windows_64_86_installer.exe
+MacOSX_silicon_installer.pkg
+MacOSX_intel_installer.pkg
+Windows_64_86_installer.exe - coming
 ## Overview
-**crit** models behavior under load, not static effects. every control alters how the system responds to audio over time, creating organic instability and character.
+**crit** models behavior under load, not static effects. every control alters how the system responds to audio over time, creating organic instability and metallic character.
 ### Compatibility:
 - Originally tested on Logic Pro
 - Validated on pluginval
@@ -42,3 +42,4 @@ Windows_64_86_installer.exe
 MIT License - see LICENSE file for details
 ## Author
 roshan pathak
+

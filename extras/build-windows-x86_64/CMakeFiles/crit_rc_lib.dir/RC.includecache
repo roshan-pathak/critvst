@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/crit_artefacts/JuceLibraryCode/crit_resources.rc
+windows.h
+-
+

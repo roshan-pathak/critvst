@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="308.30685"
+   height="33.524265"
+   viewBox="0 0 308.30685 33.524265"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1"><filter
+       style="color-interpolation-filters:sRGB"
+       id="filter95"
+       x="-0.0017258133"
+       y="-0.016333589"
+       width="1.0034516"
+       height="1.0326672"><feGaussianBlur
+         stdDeviation="0.20010412"
+         id="feGaussianBlur95" /></filter></defs><g
+     id="layer10"
+     transform="translate(-1233.0929,-184.977)"><g
+       id="g1"
+       transform="translate(482.31884,3.4782609)"><rect
+         style="opacity:1;fill:#4f4f4f;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter95)"
+         id="rect4"
+         width="307.24637"
+         height="32.463768"
+         x="751.30432"
+         y="182.02899" /><text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:'Kohinoor Gujarati';-inkscape-font-specification:'Kohinoor Gujarati';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.78px;word-spacing:-0.05px;opacity:1;fill:#4f4f4f;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="758.26086"
+         y="204.05797"
+         id="text4"><tspan
+           id="tspan4"
+           x="758.26086"
+           y="204.05797"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:'Kohinoor Gujarati';-inkscape-font-specification:'Kohinoor Gujarati';fill:#ffffff;fill-opacity:1">Load preset</tspan></text></g></g></svg>

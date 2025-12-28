@@ -1,0 +1,14 @@
+# Target labels
+ juce-populate
+# Source files and their labels
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/CMakeFiles/juce-populate
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/CMakeFiles/juce-populate.rule
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/CMakeFiles/juce-populate-complete.rule
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-build.rule
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-configure.rule
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-download.rule
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-install.rule
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-mkdir.rule
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-patch.rule
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-test.rule
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-update.rule

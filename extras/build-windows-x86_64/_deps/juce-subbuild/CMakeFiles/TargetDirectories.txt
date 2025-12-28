@@ -1,0 +1,3 @@
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/CMakeFiles/juce-populate.dir
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/CMakeFiles/edit_cache.dir
+/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-windows-x86_64/_deps/juce-subbuild/CMakeFiles/rebuild_cache.dir

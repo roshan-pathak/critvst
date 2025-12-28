@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-x86_64/cmake_install.cmake",
+		"/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-x86_64/_deps/juce-build/cmake_install.cmake",
+		"/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-x86_64/_deps/juce-build/modules/cmake_install.cmake",
+		"/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-x86_64/_deps/juce-build/extras/Build/cmake_install.cmake",
+		"/Users/roshanpathak/Desktop/Manual Library/scripts/crit_vst/crit/build-x86_64/_deps/juce-build/extras/Build/juceaide/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
