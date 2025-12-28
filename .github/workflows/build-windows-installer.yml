@@ -1,4 +1,4 @@
-name: Build Windows Installer
+ame: Build Windows Installer
 
 on:
   workflow_dispatch:
@@ -25,6 +25,12 @@ jobs:
 
       - name: Setup CMake
         uses: lukka/get-cmake@latest
+
+      - name: Clean build directory
+        run: |
+          if (Test-Path "build") {
+            Remove-Item -Path "build" -Recurse -Force
+          }
 
       - name: Install NSIS
         run: |
