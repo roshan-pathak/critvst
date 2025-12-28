@@ -6,7 +6,7 @@ A plugin for controlled instability. designed for 'distorted pop' production.
 - [MacOSX_intel_installer.pkg](https://github.com/roshan-pathak/critvst/releases/download/v1.0.0/crit_MacOSX_intel_installer.pkg)
 - Windows_64_86_installer.exe - coming
 ## Overview
-**crit** models behavior under load, not static effects. each control alters how the system responds to audio over time, creating organic instability and metallic character.
+crit is an audio effects plugin (AU/VST) that models behavior under load for crunch and space.
 ### Compatibility:
 - Originally tested on Logic Pro
 - Validated on pluginval
